@@ -1,0 +1,42 @@
+.incorrect-answer-container{
+    display: flex;
+    flex-direction:column;
+    gap: 6rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    width: 20%;
+    height: 50px;
+    margin:auto
+}
+.question-box{
+     border: 2px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    width: 70%;
+    margin: auto;
+
+}
+.answer-box{
+     border: 2px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    width: 20%;
+    /* height: 50px; */
+    margin: auto;
+    /* color: rebeccapurple; */
+    /* padding: 10px; */
+}
+.answer-box>h3{
+    align-items: center;
+    /* color: red; */
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+
+/* margin: auto; */
+
+}
+.quiz-box{
+    margin: auto;
+}

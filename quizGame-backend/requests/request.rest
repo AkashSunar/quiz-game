@@ -1,0 +1,13 @@
+GET http://localhost:3001/api/subjects
+
+###
+GET http://localhost:3001/api/subjects/657d816fdd6df8c1559b24c4
+
+###
+POST http://localhost:3001/api/subjects
+Content-Type: application/json
+
+{
+    "subject": "mathematics"
+}
+
