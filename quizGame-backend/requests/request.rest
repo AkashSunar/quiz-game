@@ -1,16 +1,3 @@
-GET http://localhost:3001/api/subjects
-
-###
-GET http://localhost:3001/api/subjects/657d816fdd6df8c1559b24c4
-
-###
-POST http://localhost:3001/api/subjects
-Content-Type: application/json
-
-{
-    "subject": "mathematics"
-}
-
 ###
 POST  http://localhost:3001/api/users
 Content-Type: application/json
@@ -21,6 +8,14 @@ Content-Type: application/json
     "password":"bus"
 }
 
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username":"john123",
+    "password":"bus"
+}
 
 ###
 GET http://localhost:3001/api/users

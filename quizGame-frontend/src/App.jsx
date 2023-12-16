@@ -1,17 +1,16 @@
-import { useState } from 'react'
-
 import './App.css'
 import Login from './LogInPage/Login';
 import DIsplayQuestion from './Question/DIsplayQuestion';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <>
-     
-      {/* <Login /> */}
-      <DIsplayQuestion />
-      
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/quiz' element={ <DIsplayQuestion />} />
+      </Routes>
+     </BrowserRouter>
   )
 }
 

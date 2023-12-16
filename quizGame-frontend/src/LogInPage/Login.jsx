@@ -1,11 +1,35 @@
-import  "./login.css"
+import { useState } from "react"
+import "./login.css"
+import logIn from "../services/authentication";
+import tokenHandle from "../utility/tokenHandle";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
+
+  const navigate = useNavigate();
+  const [credendials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
   
-  // const handleSubmit = () => {
-  //    console.log(question,"from useeffect")
-  //  }
+//   const handleLogin = name => event => {
+//   setCredentials({...credendials, [name]: event.target.value})
+  // }
+
+  const handleUsername = event => {
+      setCredentials({...credendials,username: event.target.value})
+  }
+  const handlePassword = event => {
+      setCredentials({...credendials,password: event.target.value})
+    }
 
 
+  const handleSubmit = () => {
+    logIn(credendials).then((res) => {
+      tokenHandle.setToken(res.data.token)
+      navigate("/quiz")
+    })
+  }
   return (
     
     <div className="container">
@@ -21,11 +45,12 @@ const Login = () => {
         <div className="inputs">
           <div className="input">
             <label >Username:</label>
-            <input type="text"/>
+            <input type="text" onChange={handleUsername
+            } />
           </div>
           <div className="input">
             <label >Password:</label>
-            <input type="password"/>
+            <input type="password" onChange={handlePassword}/>
           </div>
         </div>
           <div className="submit" onClick={handleSubmit} >Log in</div>

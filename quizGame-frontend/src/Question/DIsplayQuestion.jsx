@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import "./displayQuestion.css"
+import "./displayQuestion.css";
+import { useNavigate } from 'react-router-dom';
+import tokenHandle from '../utility/tokenHandle';
 const DIsplayQuestion = () => {
-    const[question,setQuestion]=useState([])
+  const [question, setQuestion] = useState([])
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = tokenHandle.getToken();
+    !token?navigate("/"):null
+  },)
+  
   useEffect(() => {
     console.log("hello from useeffect")
     axios.get("https://opentdb.com/api.php?amount=5").then(response=>{setQuestion(response.data.results)})
