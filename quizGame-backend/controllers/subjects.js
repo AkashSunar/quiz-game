@@ -13,13 +13,11 @@ app.get("/:id", (request, response) => {
     })
 })
 app.post("/", (request, response) => {
-    console.log("checking code")
     const body = request.body;
-    console.log(body, 'body')
-    const subject1 = new Subject({
+    const subject = new Subject({
         subject: body.subject
     });
-    subject1.save().then((result) => {
+    subject.save().then((result) => {
         response.json(result)
     }).catch(err => {
         console.log(err,"testing the error")

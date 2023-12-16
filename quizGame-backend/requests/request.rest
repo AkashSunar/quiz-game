@@ -11,3 +11,17 @@ Content-Type: application/json
     "subject": "mathematics"
 }
 
+###
+POST  http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username":"john123",
+    "name":"john",
+    "password":"bus"
+}
+
+
+###
+GET http://localhost:3001/api/users
+
