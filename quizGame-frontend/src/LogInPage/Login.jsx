@@ -21,9 +21,7 @@ const Login = () => {
   }
   const handlePassword = event => {
       setCredentials({...credendials,password: event.target.value})
-    }
-
-
+  }
   const handleSubmit = () => {
     logIn(credendials).then((res) => {
       tokenHandle.setToken(res.data.token)
