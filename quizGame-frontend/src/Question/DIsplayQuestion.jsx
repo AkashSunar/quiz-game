@@ -8,6 +8,7 @@ import DisplayScore from '../DisplayScore/DisplayScore';
 const DIsplayQuestion = () => {
   const [question, setQuestion] = useState([])
   const [sum, setSum] = useState(0);
+  const [colorState, setColorState] = useState(false);
   const navigate = useNavigate();
   const query = useParams();
   useEffect(() => {
@@ -27,6 +28,9 @@ const DIsplayQuestion = () => {
   }, [])
 
   const handleAnswerClick = (val, answers, correct_answer) => {
+   setColorState(!colorState)
+
+
     const matchingKey = Object.keys(answers).find(key => answers[key] === val);
     if (matchingKey === correct_answer) {
       setSum(sum + 1)
@@ -39,11 +43,7 @@ const DIsplayQuestion = () => {
 6  }
 
   const handleAnswerCheck = () => {
-    return (
-      <div>
-        <p> You have scored {sum} marks in the quiz</p>
-      </div>
-    )
+   alert(`You have scored ${sum} marks in the quiz`)
 }
 
   return (

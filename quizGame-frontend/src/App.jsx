@@ -9,13 +9,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path='/' element={<Login />} /> */}
+        <Route path='/' element={<Login />} />
         <Route path='/category' element={<Category />} />
         <Route exact path='/:id' element={<DIsplayQuestion />} />
       </Routes>
      </BrowserRouter>
-    // <Category />
-    // <CategoryCard />
     
   )
 }

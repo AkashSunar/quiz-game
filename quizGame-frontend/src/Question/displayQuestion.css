@@ -25,9 +25,12 @@
     justify-content: center;
 }
 .answer-container{
+      /* display: grid;
+    grid-template-columns: repeat(2,3fr); */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    column-gap: 5rem;
     justify-content: center;
     padding:20px;
 }
@@ -42,8 +45,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
-.answer-box:focus{
+.answer-change{
     background-color: lightgreen;
 }
 .answer-box:hover{
@@ -63,4 +67,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }

@@ -25,7 +25,7 @@ const Login = () => {
   const handleSubmit = () => {
     logIn(credendials).then((res) => {
       tokenHandle.setToken(res.data.token)
-      navigate("/quiz")
+      navigate("/category")
     })
   }
   return (
